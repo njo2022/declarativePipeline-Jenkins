@@ -1,0 +1,27 @@
+pipeline {
+	agent any
+	stages {
+		stage ('build') {
+			echo 'building...'
+		}
+		stage ('test: integration-&-quality') {
+			echo 'Integration test in progress...'
+		}
+		stage ('test: functional') {
+			echo 'Functional test in progress...'
+		}
+		stage ('test: load-&-security') {
+			echo 'Step load et security...'
+		}
+		stage ('approval') {
+			echo 'waiting approval...'
+		}
+		stage ('deploy:prod') {
+			echo 'deploying...'
+		}
+		}
+		stage ('deploy:prod End') {
+			echo 'Deployment completed...'
+		}
+	}
+}
