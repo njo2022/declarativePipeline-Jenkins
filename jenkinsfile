@@ -2,26 +2,26 @@ pipeline {
 	agent any
 	stages {
 		stage ('build') {
-			echo 'building...'
+			echo "building..."
 		}
 		stage ('test: integration-&-quality') {
-			echo 'Integration test in progress...'
+			echo "Integration test in progress..."
 		}
 		stage ('test: functional') {
-			echo 'Functional test in progress...'
+			echo "Functional test in progress..."
 		}
 		stage ('test: load-&-security') {
-			echo 'Step load et security...'
+			echo "Step load et security..."
 		}
 		stage ('approval') {
 			echo 'waiting approval...'
 		}
 		stage ('deploy:prod') {
-			echo 'deploying...'
+			echo "deploying..."
 		}
 		}
 		stage ('deploy:prod End') {
-			echo 'Deployment completed...'
+			echo "Deployment completed..."
 		}
 	}
-}
+	
